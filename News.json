@@ -1,0 +1,7 @@
+[
+    {"base":"Setting","type":"Setting"}
+    ,
+    {"base":"Product","type":"Product\\News"}
+    ,
+    {"base":"Release","type":"Release\\HtmlResponse"}
+]
