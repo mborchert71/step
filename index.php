@@ -1,10 +1,10 @@
 <?php
 include_once('init.php');
 
-if(!isset($_GET["@"]))die("@{name}");
-if(is_file($file= $_GET["@"].".html")) header("location:$file");     //static
-if(is_file($file= $_GET["@"].".php")) header("location:$file");      //dynamic
-if(!is_file($file= $_GET["@"].".json")) die("cannot read file $file");//abstract
+if(!strlen($_SERVER["QUERY_STRING"]))die("?/Blog | ?/News");
+if(is_file($file= ".".$_SERVER["QUERY_STRING"].".html")) header("location:$file");     //static
+if(is_file($file= ".".$_SERVER["QUERY_STRING"].".php")) header("location:$file");      //dynamic
+if(!is_file($file= ".".$_SERVER["QUERY_STRING"].".json")) die("cannot read file $file");//generic
 if(!$json= file_get_contents($file)) die("cannot read file $file");
 if(!$handle = json_decode($json)) die("invalid json");
 

@@ -1,6 +1,4 @@
-der Ansatz ist sehr gut.
-
-mehrere Innovationen
+Innovationen
 
 - Response-generierungs-typ je nach Request-volumen (Balance aus ResponseGeschwindigkeit und ProzessDatenAbstraktion)
 	-statisch,dynamisch,generisch
@@ -14,20 +12,17 @@ mehrere Innovationen
 - Stoplead ist Matrix des process-schemas
 
 todo:
-
-	- @weg und nur den request-hash parsen  ?News ?Blog  
+ 
 	- umbenennung: Event zu Request oder Response zu Action
 	- get und set eliminieren aus dem /dev/*+.svg diagramm
 	- comments entfernen
 	- code-review
-
+        - rename $_HANDLE
 
 Dieses kleine TestScript führte ua. zu der Beschäftigung mit "bpmn"
 
 BusinessProcessManagementNotation
 
-und dem Ansatz die Notation zu verallgemeinern , zB um, wie oben, als universelles 
-zeitgesteuertes ereignis verarbeitungs und speicher modell auf hohem AbstraktionsNiveau zu dienen.
+und dem Ansatz die Notation zu verallgemeinern ,um, wie oben, als universelles 
+zeitgesteuertes ereignis verarbeitungs und speicher modell zu dienen,
 sowohl Matrix für das "System"(Programm) wie für den "Inhalt"(Daten)
-
-
