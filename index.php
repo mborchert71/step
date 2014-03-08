@@ -1,18 +1,32 @@
 <?php
+
 include_once('init.php');
 
-if(!strlen($_SERVER["QUERY_STRING"]))die("?/Blog | ?/News");
-if(is_file($file= ".".$_SERVER["QUERY_STRING"].".html")) header("location:$file");     //static
-if(is_file($file= ".".$_SERVER["QUERY_STRING"].".php")) header("location:$file");      //dynamic
-if(!is_file($file= ".".$_SERVER["QUERY_STRING"].".json")) die("cannot read file $file");//generic
-if(!$json= file_get_contents($file)) die("cannot read file $file");
-if(!$handle = json_decode($json)) die("invalid json");
+$qs = $_SERVER["QUERY_STRING"];
 
-$_HANDLE = new Step\Handle();
+if (!strlen($qs)) {
+    die("?/Blog | ?/News");
+}
+if (is_file($file = ".$qs.html")) {
+    header("location:$file");
+}
+if (is_file($file = ".$qs.php")) {
+    header("location:$file");
+}
+if (!is_file($file = ".$qs.json")) {
+    die("cannot read file $file");
+}
+if (!$json = file_get_contents($file)) {
+    die("cannot read file $file");
+}
+if (!$Sequence = json_decode($json)) {
+    die("invalid json");
+}
 
-foreach($handle as $parameter){
-    $_HANDLE->{$parameter->base}($parameter->type,$parameter)->render();
+$_PROCESS = new Step\Process;
+
+foreach ($Sequence as $_) {
+    $_PROCESS->{$_->base}($_->type, $_)->render();
 }
 
 include_once('exit.php');
-?>

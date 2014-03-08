@@ -2,6 +2,6 @@
 
 namespace Step;
 
-class Release extends Base {
+class Action extends Base {
     
 }

@@ -1,7 +1,7 @@
 [
-    {"base":"Setting","type":"Setting"}
+    {"base": "Setting", "type": "Setting"}
     ,
-    {"base":"Product","type":"Product\\News"}
+    {"base": "Product", "type": "Product\\News"}
     ,
-    {"base":"Release","type":"Release\\HtmlResponse"}
+    {"base": "Release", "type": "Release\\HtmlResponse"}
 ]

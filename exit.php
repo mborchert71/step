@@ -1,10 +1,7 @@
 <?php
-/**
- * Cleanup Step-Framework
- */
 
-if(_debug_)print_r($_HANDLE);
+if (DEBUG) {
+    print_r($_PROCESS);
+}
 
 clearstatcache();
-
-?>

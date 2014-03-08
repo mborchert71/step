@@ -1,27 +1,40 @@
 <?php
+
 /**
  * ScriptGenerator
- * takes as Step-Configuration.json and saves ../{name}.php 
+ * ./{Step-Configuration}.json to ./{Step-Configuration}.php 
  */
-if(!isset($_GET["@"]))die("@{name}");
-if(!is_file($conf= "../".$_GET["@"].".json")) die("cannot read file $conf");
-if(is_file($file= "../".$_GET["@"].".php") && !isset($_GET["§"]))die("@{name}&§=true");
-if(!$json= file_get_contents($conf)) die("cannot read file $conf");
-if(!$build = json_decode($json)) die("invalid json");
+$qs = $_SERVER["QUERY_STRING"];
 
-$php ="<?php\n";
-$php.="/**dochead**/\n";
+if (!strlen($qs)) {
+    die("?/Blog | ?/News");
+}
+if (!is_file($file = "..$qs.json")) {
+    die("cannot read file $file");
+}
+if (is_file($file = "..$qs.php") && !array_key_exists("§", $_REQUEST)) {
+    die("?/Blog | ?/News & §=true");
+}
+if (!$json = file_get_contents($file)) {
+    die("cannot read file $file");
+}
+if (!$Sequence = json_decode($json)) {
+    die("invalid json");
+}
+
+$php = "<?php\n";
 $php.="include_once 'init.php';\n";
-$php.="\$_HANDLE = new Step\Handle();\n";
-$php.="\$_HANDLE\n";
-foreach($build as $parameter){
-$php.=$parameter->base."('".$parameter->type."')->render()\n";
+$php.="\$_PROCESS = new Step\Process();\n";
+$php.="\$_PROCESS\n";
+foreach ($Sequence as $_) {
+    $php.=$_->base . "('" . $_->type . "')->render()\n";
 }
 $php.=";\n";
-$php.="include_once 'exit.php';\n";
-$php.="?>";
+$php.="include_once 'exit.php';";
 
-if(file_put_contents($file,$php))
+if (file_put_contents($file, $php)) {
     header("location:$file");
-else die("cannot save file: $file");
-?>
+}
+else {
+    die("cannot save file: $file");
+}

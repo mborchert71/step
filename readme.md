@@ -1,15 +1,16 @@
-Innovationen
+***Innovationen
 
-- Response-generierungs-typ je nach Request-volumen (Balance aus ResponseGeschwindigkeit und ProzessDatenAbstraktion)
-	-statisch,dynamisch,generisch
-- automatisches laden und speichern der Klassen-"States" , default filesystem , overwrite by whatever.
-- Produktions-vorgang als PROCESS-Paradigma
-- Klassenhierarchie, homogene Standardbasis: _methods _properties
-	_methods		
-		aus der Erfahrung mit EreignisOrientierten Programmierung entlehnt  before,on,after => prepare,execute,finish
-		jede Klasse verfügt über load + save
-		 
-- Stoplead ist Matrix des process-schemas
++ 3 basic Response-types balancing ResponseSpeed and ProcessDataAbstraction
+    + static
+    + dynamic
+    + generic
++ Automatic Load and Save of Setting , default is saving to filesystem.
++ ClassAbstraction, homogene Standardbase: _methods _properties
+        + _properties
+    	+ _methods		
+		+ aus der Erfahrung mit EreignisOrientierten Programmierung entlehnt  before,on,after => prepare,execute,finish
+		+ jede Klasse verfügt über load + save
+
 
 todo:
  
@@ -17,7 +18,9 @@ todo:
 	- get und set eliminieren aus dem /dev/*+.svg diagramm
 	- comments entfernen
 	- code-review
-        - rename $_HANDLE
+        - rename $_PROCESS
+
+--------------
 
 Dieses kleine TestScript führte ua. zu der Beschäftigung mit "bpmn"
 

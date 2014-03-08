@@ -1,13 +1,13 @@
 <?php
-/**
- * Initialize the Step-Framework
- */
-define( "_debug_" , (isset($_REQUEST["debug"])) ? true : false );
 
-function __autoload($class){
-    include_once str_replace("\\","/",$class).".php";
+define("DEBUG", (array_key_exists("debug",$_REQUEST)) ? true : false );
+
+if(DEBUG){
+    error_reporting(null);
 }
 
-Step\Handle::$Root = __DIR__;
+function __autoload($class) {
+    include_once str_replace("\\", "/", $class) . ".php";
+}
 
-?>
+Step\Process::$Root = __DIR__;
