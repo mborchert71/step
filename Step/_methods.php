@@ -6,9 +6,9 @@ interface _methods {
 
     public function prepare();
 
-    public function execute();
+    public function perform();
 
-    public function finish();
+    public function postpare();
 
     public function render();
 

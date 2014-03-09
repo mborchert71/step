@@ -1,17 +1,7 @@
 <?php
 
-/**
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 namespace Step;
 
-/**
- * Description of Process
- *
- * @package
- */
 class Process {
 
     static $Root;
@@ -39,11 +29,11 @@ class Process {
         return in_array($class, $this->Class);
     }
 
-    public function __call($type, $arguments) {
+    public function __call($type, $argume) {
         if ($this->ClassExists($type))
             ;
-        $class = "Step\\" . $arguments[0];
-        return new $class($arguments[0], $arguments);
+        $class = "Step\\" . $argume[0];
+        return new $class($argume[0], $argume);
     }
 
 }

@@ -1,5 +1,5 @@
 [
-    {"base": "Setting", "type": "Setting"},
-    {"base": "Product", "type": "Product\\Blog"},
-    {"base": "Release", "type": "Release\\HtmlResponse"}
+    {"Base": "Setting", "Type": "Setting"},
+    {"Base": "Product", "Type": "Product\\Blog"},
+    {"Base": "Release", "Type": "Release\\HtmlResponse"}
 ]

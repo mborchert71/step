@@ -1,31 +1,35 @@
-***Innovationen
+###Innovations
 
 + 3 basic Response-types balancing ResponseSpeed and ProcessDataAbstraction
     + static
     + dynamic
     + generic
 + Automatic Load and Save of Setting , default is saving to filesystem.
-+ ClassAbstraction, homogene Standardbase: _methods _properties
++ ClassAbstraction, StandardBase: _methods _properties
         + _properties
+            + Process
+            + Arctype
+            + State
+            + Type
+            + Prepare
+            + Perform
+            + Postpare
     	+ _methods		
-		+ aus der Erfahrung mit EreignisOrientierten Programmierung entlehnt  before,on,after => prepare,execute,finish
-		+ jede Klasse verfügt über load + save
+            + load
+            + prepare
+            + perform
+            + postpare
+            + save
+
+------------------
+
+This little Process Object Experiment lead to
 
 
-todo:
- 
-	- umbenennung: Event zu Request oder Response zu Action
-	- get und set eliminieren aus dem /dev/*+.svg diagramm
-	- comments entfernen
-	- code-review
-        - rename $_PROCESS
-
---------------
-
-Dieses kleine TestScript führte ua. zu der Beschäftigung mit "bpmn"
+introduce myself with "bpmn"
 
 BusinessProcessManagementNotation
 
-und dem Ansatz die Notation zu verallgemeinern ,um, wie oben, als universelles 
-zeitgesteuertes ereignis verarbeitungs und speicher modell zu dienen,
-sowohl Matrix für das "System"(Programm) wie für den "Inhalt"(Daten)
+creating a high level time-triggered event processing and data persistence model
+
+being valid for the program itself and the processed data.

@@ -6,16 +6,16 @@ class HtmlResponse extends \Step\Release {
 
     public function __construct($type) {
         parent::__construct($type);
-        $this->finish = new \Step\_call("Setting", "save");
-        $this->execute = new \Step\_call("Release", "page");
+        $this->Perform = new \Step\_me("Release", "page");
+        $this->Postpare = new \Step\_me("Setting", "save");
     }
 
     public function page() {
-        print "<h2>" . ($this->Process->Product->state) . "</h2>";
+        print "<h2>" . ($this->Process->Product->State) . "</h2>";
     }
 
     public function widget() {
-        print "<div>" . ($this->Process->Product->state) . "</div>";
+        print "<div>" . ($this->Process->Product->State) . "</div>";
     }
 
 }

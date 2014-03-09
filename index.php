@@ -26,7 +26,7 @@ if (!$Sequence = json_decode($json)) {
 $_PROCESS = new Step\Process;
 
 foreach ($Sequence as $_) {
-    $_PROCESS->{$_->base}($_->type, $_)->render();
+    $_PROCESS->{$_->Base}($_->Type, $_)->render();
 }
 
 include_once('exit.php');

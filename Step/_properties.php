@@ -5,20 +5,18 @@ namespace Step;
 class _properties {
 
     public $Process;
-    public $type;
-    public $basename;
-    public $state;
-    public $prepare;
-    public $execute;
-    public $finish;
+    public $Arctype;
+    public $State;
+    public $Type;
+    public $Prepare;
+    public $Perform;
+    public $Postpare;
 
-    public function __construct(
-    $type = "Base", \stdClass $setting = null
-    ) {
-        $this->type = str_replace("\\", "/", $type); //@notice:autoload       
-        $this->basename = array_shift(@explode("/", $this->type));
-        $this->type = "Step/" . $this->type;
-        //iterate validate setting...
+    public function __construct($type = "Base", \stdClass $setting = null) {
+        $thisType = str_replace("\\", "/", $type); //use:in autoload       
+        $this->Arctype = array_shift(explode("/", $thisType));
+        $this->Type = "Step/" . $thisType;
+        //todo:iterate validate setting...
     }
 
 }

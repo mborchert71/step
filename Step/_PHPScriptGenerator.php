@@ -27,7 +27,7 @@ $php.="include_once 'init.php';\n";
 $php.="\$_PROCESS = new Step\Process();\n";
 $php.="\$_PROCESS\n";
 foreach ($Sequence as $_) {
-    $php.=$_->base . "('" . $_->type . "')->render()\n";
+    $php.=$_->Base . "('" . $_->Type . "')->render()\n";
 }
 $php.=";\n";
 $php.="include_once 'exit.php';";

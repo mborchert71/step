@@ -4,9 +4,9 @@ namespace Step;
 
 class Setting extends Base {
 
-    public function execute($arguments = null) {
+    public function perform($arguments = null) {
         $this->load();
-        if (!$this->state) {
+        if (!$this->State) {
             file_put_contents($this . ".json", '{"Product_Counter":0}');
         }
         return $this;
